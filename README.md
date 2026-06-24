@@ -1,127 +1,145 @@
-# Citi Bike Jersey City Data Analysis Project
+# 🚲 Citi Bike Jersey City — Data Analysis Project
 
-This project analyzes **Citi Bike Jersey City trip data** using Python notebooks.
+![Python](https://img.shields.io/badge/Python-3.12-3776AB?style=flat-square&logo=python&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?style=flat-square&logo=jupyter&logoColor=white)
+![GeoPandas](https://img.shields.io/badge/GeoPandas-Geospatial-139C5A?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
-**The project includes:**
-
-- Downloading Citi Bike Jersey City data
-- Cleaning and enriching trip data
-- Collecting weather data
-- Creating visualizations
-- Performing neighborhood-level geospatial analysis
+> Explore Jersey City Citi Bike trip patterns through data enrichment, weather correlation, interactive maps, and neighborhood-level geospatial analysis.
 
 ---
 
-## Project Structure
+## 📑 Table of Contents
 
-```text
+- [🚲 Citi Bike Jersey City — Data Analysis Project](#-citi-bike-jersey-city--data-analysis-project)
+  - [📑 Table of Contents](#-table-of-contents)
+  - [🗺️ Project Overview](#️-project-overview)
+  - [📁 Project Structure](#-project-structure)
+  - [🚀 Getting Started](#-getting-started)
+    - [1. Create a GitHub Repository](#1-create-a-github-repository)
+    - [2. Clone the Repository](#2-clone-the-repository)
+    - [3. Open the Project in VS Code](#3-open-the-project-in-vs-code)
+    - [4. Create a Virtual Environment](#4-create-a-virtual-environment)
+    - [5. Install Required Packages](#5-install-required-packages)
+    - [6. Recommended `requirements.txt`](#6-recommended-requirementstxt)
+  - [🗄️ Data Folder](#️-data-folder)
+  - [📓 Notebook Guide](#-notebook-guide)
+    - [`1_Download_Citibike_Jersey_Data.ipynb`](#1_download_citibike_jersey_dataipynb)
+    - [`2_Data_Enrichment.ipynb`](#2_data_enrichmentipynb)
+    - [`3_Weather_Data.ipynb`](#3_weather_dataipynb)
+    - [`4_Data_Visualization.ipynb`](#4_data_visualizationipynb)
+    - [`5_Neighborhood_Analysis.ipynb`](#5_neighborhood_analysisipynb)
+  - [🔢 Suggested Execution Order](#-suggested-execution-order)
+  - [🎯 Project Goal](#-project-goal)
+
+---
+
+## 🗺️ Project Overview
+
+This project analyzes **Citi Bike Jersey City** trip data using a series of structured Python notebooks. The pipeline covers:
+
+| Step | Description |
+|------|-------------|
+| 📥 Download | Fetch Citi Bike Jersey City trip data |
+| 🧹 Enrich | Clean columns, parse dates, add features |
+| 🌦️ Weather | Collect and align daily weather data |
+| 📊 Visualize | Build charts using Matplotlib, Plotly, Folium |
+| 🗺️ Geospatial | Map rides to Jersey City neighborhoods |
+
+---
+
+## 📁 Project Structure
+
+```
 .
 ├── README.md
-├── data
-│   └── JC
-└── notebooks
-    ├── 1_Download_Citibike_Jersey_Data copy.ipynb
+├── data/
+│   └── JC/                          # Raw & processed Citi Bike datasets
+└── notebooks/
+    ├── 1_Download_Citibike_Jersey_Data.ipynb
     ├── 2_Data_Enrichment.ipynb
     ├── 3_Weather_Data.ipynb
     ├── 4_Data_Visualization.ipynb
-    └── 5_Neighborhood_Analysis copy.ipynb
+    └── 5_Neighborhood_Analysis.ipynb
 ```
-
-
-
-## 1. Create a GitHub Repository
-
-1. Go to GitHub.
-2. Click **New repository**.
-3. Enter a repository name, for example: `citibike`
-5. Choose **Public**
-6. Click **Create repository**.
-
-If the project already exists locally, do not initialize the repository with a README file.
 
 ---
 
-## 2. Clone the Repository
+## 🚀 Getting Started
 
-Open the terminal and run:
+### 1. Create a GitHub Repository
+
+1. Go to [GitHub](https://github.com) and click **New repository**
+2. Name it `citibike` and set it to **Public**
+3. Click **Create repository**
+
+> ⚠️ If the project already exists locally, **do not** initialize with a README.
+
+---
+
+### 2. Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/citibike.git
-```
-
-Replace `YOUR_USERNAME` with your GitHub username.
-
-Navigate into the project folder:
-
-```bash
 cd citibike
 ```
 
+> Replace `YOUR_USERNAME` with your actual GitHub username.
+
 ---
 
-## 3. Open the Project in VS Code
-
-Open the project folder in VS Code:
+### 3. Open the Project in VS Code
 
 ```bash
 code .
 ```
 
-If the `code` command does not work, open VS Code manually and select:
-
-```text
-File → Open Folder → citibike-jersey-city-analysis
-```
+> If the `code` command doesn't work, open VS Code manually:
+> **File → Open Folder → `citibike`**
 
 ---
 
-## 4. Create a Virtual Environment
-
-Create a Conda environment:
+### 4. Create a Virtual Environment
 
 ```bash
+# Create the Conda environment
 conda create -n citibike-env python=3.12
-```
 
-Activate the environment:
-
-```bash
+# Activate it
 conda activate citibike-env
 ```
 
 ---
 
-## 5. Install Required Packages
-
-Install the required Python packages:
+### 5. Install Required Packages
 
 ```bash
 conda install pandas geopandas folium plotly matplotlib ipykernel requests
 ```
 
-When opening notebooks in VS Code or Jupyter, select this kernel:
+When opening notebooks in VS Code or Jupyter, select the kernel:
 
-```text
+```
 Python (citibike)
 ```
 
 ---
 
-## 6. Recommended `requirements.txt`
+### 6. Recommended `requirements.txt`
 
-Create a file named `requirements.txt`:
+Create a file named `requirements.txt` in the project root:
 
 ```text
 pandas
-geopandas 
-folium 
-plotly 
-matplotlib 
-ipykernel 
+geopandas
+folium
+plotly
+matplotlib
+ipykernel
 requests
 ```
 
-Install packages from `requirements.txt`:
+Then install via pip:
 
 ```bash
 pip install -r requirements.txt
@@ -129,131 +147,103 @@ pip install -r requirements.txt
 
 ---
 
-## 7. Data Folder
+## 🗄️ Data Folder
 
-The project stores data inside:
+All datasets are stored inside:
 
-```text
-data/JC
+```
+data/JC/
 ```
 
-This folder is used for Jersey City Citi Bike datasets.
-
-Raw data files should be placed or downloaded into this folder.
-
----
-
-## 8. Notebook Explanation
-
-The notebooks should be executed in order.
+- Used for Jersey City Citi Bike CSV datasets
+- Raw files should be placed or downloaded into this folder
+- Generated by **Notebook 1** and consumed by all subsequent notebooks
 
 ---
 
-### Notebook 1: `1_Download_Citibike_Jersey_Data copy.ipynb`
+## 📓 Notebook Guide
 
-This notebook downloads Jersey City Citi Bike trip data.
+### `1_Download_Citibike_Jersey_Data.ipynb`
+> **Downloads raw Citi Bike trip data**
 
-Main tasks:
-
-- Defines the required time periods
+- Defines required time periods
 - Builds download URLs for Citi Bike data
-- Downloads ZIP or CSV files
-- Extracts downloaded files
-- Saves raw data into the `data/JC` folder
+- Downloads ZIP or CSV files and extracts them
+- Saves raw data to `data/JC/`
 
-Run this notebook first because the other notebooks depend on the downloaded data.
-
----
-
-### Notebook 2: `2_Data_Enrichment.ipynb`
-
-This notebook cleans and enriches the raw Citi Bike data.
-
-Main tasks:
-
-- Loads the downloaded trip data
-- Cleans column names
-- Converts date and time columns
-- Creates new date-related fields
-- Adds features such as year, month, weekday, and season
-- Prepares the dataset for analysis
-
-This notebook transforms raw data into an analysis-ready format.
+⚠️ **Run this first** — all other notebooks depend on its output.
 
 ---
 
-### Notebook 3: `3_Weather_Data.ipynb`
+### `2_Data_Enrichment.ipynb`
+> **Cleans and enriches raw trip data**
 
-This notebook prepares weather data for Jersey City.
-
-Main tasks:
-
-- Collects daily weather data
-- Processes temperature, rain, snow, precipitation, and wind fields
-- Aligns weather data with Citi Bike trip dates
-- Prepares weather data for joining with ride activity
-
-This notebook helps analyze the relationship between weather and Citi Bike usage.
+- Loads downloaded trip data
+- Normalizes column names
+- Converts date/time columns
+- Adds derived fields: `year`, `month`, `weekday`, `season`
+- Outputs an analysis-ready dataset
 
 ---
 
-### Notebook 4: `4_Data_Visualization.ipynb`
+### `3_Weather_Data.ipynb`
+> **Prepares weather data for Jersey City**
 
-This notebook creates visualizations for the project.
-
-Main tasks:
-
-- Analyzes ride volume over time
-- Creates daily, monthly, and seasonal charts
-- Compares ride activity with weather indicators
-- Builds visual outputs using libraries such as Matplotlib, Seaborn, Plotly, and Folium
-- Supports exploratory data analysis and storytelling
-
-This notebook is focused on visual analysis.
+- Collects daily weather observations
+- Processes temperature, rain, snow, precipitation, and wind
+- Aligns weather records with Citi Bike trip dates
+- Enables weather–ridership correlation analysis
 
 ---
 
-### Notebook 5: `5_Neighborhood_Analysis copy.ipynb`
+### `4_Data_Visualization.ipynb`
+> **Creates charts and visual insights**
 
-This notebook performs neighborhood-level geospatial analysis.
+- Analyzes ride volume over time (daily, monthly, seasonal)
+- Compares ridership against weather indicators
+- Builds outputs using **Matplotlib**, **Seaborn**, **Plotly**, and **Folium**
+- Supports exploratory data analysis and data storytelling
 
-Main tasks:
+---
 
-- Uses station coordinates
-- Uses Jersey City neighborhood boundaries
-- Maps Citi Bike stations to neighborhoods
+### `5_Neighborhood_Analysis.ipynb`
+> **Geospatial analysis by neighborhood**
+
+- Maps Citi Bike stations to Jersey City neighborhood boundaries
 - Aggregates rides by neighborhood
-- Creates map-based visualizations
-- Uses GeoPandas, Shapely, and Folium for spatial analysis
-
-This notebook helps understand Citi Bike usage across different neighborhoods.
+- Creates interactive choropleth and pin maps
+- Uses **GeoPandas**, **Shapely**, and **Folium**
 
 ---
 
-## 9. Suggested Notebook Execution Order
+## 🔢 Suggested Execution Order
 
-Run the notebooks in the following order:
+Run notebooks **strictly in this order** — each depends on the previous:
 
-```text
-1_Download_Citibike_Jersey_Data copy.ipynb
-2_Data_Enrichment.ipynb
-3_Weather_Data.ipynb
-4_Data_Visualization.ipynb
-5_Neighborhood_Analysis copy.ipynb
+```
+1️⃣  1_Download_Citibike_Jersey_Data.ipynb
+        ↓
+2️⃣  2_Data_Enrichment.ipynb
+        ↓
+3️⃣  3_Weather_Data.ipynb
+        ↓
+4️⃣  4_Data_Visualization.ipynb
+        ↓
+5️⃣  5_Neighborhood_Analysis.ipynb
 ```
 
-The order is important because later notebooks depend on outputs from earlier notebooks.
+---
 
+## 🎯 Project Goal
 
+Analyze Jersey City Citi Bike usage patterns and understand how ridership changes across:
 
-## 10. Project Goal
+- ⏰ **Time** — hours, days, months
+- 🍂 **Season** — spring, summer, fall, winter
+- 🌧️ **Weather** — temperature, rain, snow, wind
+- 📍 **Stations** — individual dock-level analysis
+- 🏘️ **Neighborhoods** — geographic aggregation
 
-The goal of this project is to analyze Jersey City Citi Bike usage patterns and understand how ridership changes by:
+This project is ideal for **data analysis practice**, **geospatial analytics**, **dashboard preparation**, and **storytelling with real-world transportation data**.
 
-- Time
-- Season
-- Weather conditions
-- Stations
-- Neighborhoods
-
-The project can be used for data analysis practice, geospatial analytics, dashboard preparation, and storytelling with real-world transportation data.
+---
