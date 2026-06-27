@@ -1,5 +1,6 @@
 data/*.csv
 data/JC/*.csv
+data/JC/*.geojson
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
